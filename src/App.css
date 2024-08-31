@@ -1,38 +1,102 @@
-.App {
-  text-align: center;
+body, html {
+    margin: 0;
+    padding: 0;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+    background-color: rgb(128, 226, 230);
+    color: #fff;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.container {
+    padding: 40px;
+    background-color: rgb(49, 107, 117);
+    width: 700px;
+    height: 350px;
+    margin:  150px auto;
+    border-radius: 20px;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.searchBut {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
-
-.App-link {
-  color: #61dafb;
+input {
+    width: 610px;
+    padding: 20px;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    border: none;
+    color: rgb(49, 107, 117);
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+input:focus {
+    outline: 2px solid rgb(23, 214, 228);
+}
+button {
+    margin-left: 3px;
+    border: none;
+    width: 50px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.gg-search {
+    box-sizing: border-box;
+    position: relative;
+    display: block;
+    transform: scale(var(--ggs,1));
+    width: 16px;
+    height: 16px;
+    border: 2px solid;
+    border-radius: 100%;
+    margin-left: -4px;
+    margin-top: -4px
+}
+.gg-search::after {
+    content: "";
+    display: block;
+    box-sizing: border-box;
+    position: absolute;
+    border-radius: 3px;
+    width: 2px;
+    height: 8px;
+    background: currentColor;
+    transform: rotate(-45deg);
+    top: 10px;
+    left: 12px
+}
+.result {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 20px;
+}
+.grid1, .grid2 {
+    background-color: rgb(128, 226, 230);
+    margin-top: 30px;
+    border-radius: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.text {
+    text-transform: capitalize;
+    font-weight: bold;
+}
+.title {
+    text-align: center;
+}
+.center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+img {
+    width: 100px;
+}
+.smaller-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.wind {
+    font-weight: bold;
 }
